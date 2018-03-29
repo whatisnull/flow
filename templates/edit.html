@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block items %}
+	<div class="box">
+	<div class="box post">
+            <h2>添加</h2>
+            <form action="/edit" method="post" id="post_new">
+                <p>fid:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="fid" class="long_txt" value="{{flow.get('id')}}" readonly="true"/></p>
+                <br/>
+                <p>ratio:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="ratio" class="long_txt" value="{{flow.get('ratio')}}"/></p>
+                <br/>
+                <p>desc:&nbsp;&nbsp;&nbsp;<input type="text" name="desc" class="long_txt" value="{{flow.get('desc')}}"/></p>
+                <br/>
+                <p>host:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="host" class="long_txt" value="{{flow.get('host')}}"/></p>
+                <br/>
+                <p>status:&nbsp;&nbsp;
+                    <select name="status" class="long_txt">
+                        <option value="">Select...</option>
+                        {% if flow.get('status') == 1 %}
+                            <option value="1" selected="selected">生效</option>
+                            <option value="0" >失效</option>
+                        {% elif flow.get('status') !=1 %}
+                            <option value="1" >生效</option>
+                            <option value="0" selected="selected">失效</option>
+                        {% end %}
+                    </select>
+                </p>
+                <br/>
+                <p>created:&nbsp;<input type="text" name="created" class="long_txt" value="{{flow.get('create_time')}}" readonly="true" /></p>
+                <br/>
+                <p>updated:&nbsp;<input type="text" name="updated" class="long_txt" value="{{flow.get('update_time')}}" readonly="true" /></p>
+                <br/>
+                <p><input type="submit" class="submit" value="完成" /></p>
+            </form>
+        </div>
+
+	</div>
+{% end %}
+
+{% block bottom %}
+{% end %}

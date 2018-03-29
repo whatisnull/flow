@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block items %}
+	<div class="box">
+		<div class="box post">
+            <h2>添加</h2>
+            <form action="/add" method="post" id="post_new">
+                <p>ratio:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="ratio" class="long_txt" value="5"/></p>
+                <br/>
+                <p>desc:&nbsp;&nbsp;&nbsp;<input type="text" name="desc" class="long_txt" value="desc."/></p>
+                <br/>
+                <p>host:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="host" class="long_txt" value="http://www.baidu.com"/></p>
+                <br/>
+                <p>status:&nbsp;
+                    <select name="status" class="long_txt">
+                        <option value="">Select...</option>
+                        <option value="1">生效</option>
+                        <option value="0">失效</option>
+                    </select>
+                </p>
+                <br/>
+                <p><input type="submit" class="submit" value="完成" /></p>
+            </form>
+        </div>
+
+	</div>
+{% end %}
+
+{% block bottom %}
+{% end %}

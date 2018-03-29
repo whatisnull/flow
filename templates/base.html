@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>
+			{% block title %}flow service{% end %}
+		</title>
+		<link rel="stylesheet" href="{{ static_url("css/reset.css") }}" type="text/css"/>
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="header box">
+				<a href="http://www.tornadoweb.org/en/stable/" target="_blank">
+        		</a>
+				<a href="/admin">管理首页</a>
+			</div>
+
+			<div class="main box">
+				{% block items %}
+				{% end %}
+			</div>
+
+			<div class="foot">
+        		Copyright <span>©</span> 小流量管理平台
+        		作者 <a href="http://www.golr.site/">Dr.wang</a>
+        		&nbsp;
+        		<a href="http://webpy.org/" target="_blank">
+        		</a>
+        		<br>
+        		本程序由 Dr.wang 使用tornado编写
+    		</div>
+		</div>
+		{% block bottom %}{% end %}
+	</body>
+
+</html>

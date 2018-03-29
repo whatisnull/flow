@@ -1,0 +1,17 @@
+body { background:#EEE; }
+.box { margin-bottom:20px; }
+.clear { clear:both; }
+.float_left { float:left; }
+.float_right { float:right; }
+.left { text-align:left; }
+.right { text-align:right; }
+.url { background:url(images/website.png) no-repeat right; padding-right:20px; }
+.tips { color:#CCC; }
+.v_top { vertical-align:top; }
+.qq { background:url(images/qq.png) no-repeat right; padding-right:20px; }
+.msn { background:url(images/msn.png) no-repeat right; padding-right:20px; }
+.email { background:url(images/email.png) no-repeat right; padding-right:20px; }
+.tips { color:#666; }
+.long_txt { width:98%; }
+.must_be { color:red !important; }
+textarea { line-height:1.5em; }
